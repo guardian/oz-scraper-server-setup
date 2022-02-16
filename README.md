@@ -1,7 +1,7 @@
 # Guardian Aus scraping server installation and setup guide
 
 - Use the latest 20+ Ubuntu image on EC2
-- Ensure python 3 is already installed and working (check with python3 -- version). If it is not installed, follow the instructions (here)[https://docs.python-guide.org/starting/install3/linux/]
+- Ensure python 3 is already installed and working (check with python3 -- version). If it is not installed, follow the instructions [here](https://docs.python-guide.org/starting/install3/linux/)
 
 - Install dependencies:
 
@@ -20,7 +20,7 @@ sudo mv geckodriver /usr/bin/geckodriver
 - Install selenium etc with pip/pip3
 
 
-- It may be better to run selenium scripts with xvfb-run or use (pyvirtualdisplay)[https://github.com/ponty/pyvirtualdisplay/tree/3.0]. This takes care of starting and stopping the Xvfb process which allows headless Firefox to run
+- It may be better to run selenium scripts with xvfb-run or use [pyvirtualdisplay](https://github.com/ponty/pyvirtualdisplay/tree/3.0). This takes care of starting and stopping the Xvfb process which allows headless Firefox to run
 
 - Alternativelt, to manually start Xvfb:
 
