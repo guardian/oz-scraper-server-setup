@@ -22,7 +22,7 @@ sudo mv geckodriver /usr/bin/geckodriver
 
 - It may be better to run selenium scripts with xvfb-run or use [pyvirtualdisplay](https://github.com/ponty/pyvirtualdisplay/tree/3.0). This takes care of starting and stopping the Xvfb process which allows headless Firefox to run
 
-- Alternativelt, to manually start Xvfb:
+- Alternatively, to manually start Xvfb:
 
 ```
 Xvfb :10 -ac &
@@ -34,6 +34,17 @@ Xvfb :10 -ac &
 export DISPLAY=:10
 ```
 
+- Install [cronic](http://habilis.net/cronic/) for better cron scheduling
+
+```
+sudo apt-get install cronic
+```
+
+- Use crontab - e to schedule scrapers with cronic and loading the profile for env variables, eg:
+
+```
+5 */2 * * * . /home/ubuntu/.profile; cd /home/ubuntu/oz-covid-health-data/ && cronic /usr/bin/python3 /home/ubuntu/oz-covid-health-data/run_data.py
+```
 
 Sources:
 
